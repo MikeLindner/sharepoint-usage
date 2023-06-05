@@ -7,11 +7,11 @@ $url = 'https://mikelindner.com-admin.sharepoint.com'
 $path = '.\'
 
 #SMTP details
-$Smtp = '<SmtpServer>'
-$From = '<SenderEmailAddress>'  
-$To = '<RecipientEmailAddress>'
-$Subject = 'Site Storage Warning'  
-$Body = 'Storage Usage Details'
+#$Smtp = '<SmtpServer>'
+#$From = '<SenderEmailAddress>'  
+#$To = '<RecipientEmailAddress>'
+#$Subject = 'Site Storage Warning'  
+#$Body = 'Storage Usage Details'
 
 if($url -eq '') {
     $url = Read-Host -Prompt 'Enter the SharePoint admin center URL'
@@ -46,4 +46,4 @@ foreach ($site in $sites) {
 $results | Export-Csv -Path $fullpath -NoTypeInformation
 
 #Sending email with output file as attachment  
-Send-MailMessage -SmtpServer $Smtp -To $To -From $From -Subject $Subject -Attachments $fullpath -Body $Body -Priority high
+#Send-MailMessage -SmtpServer $Smtp -To $To -From $From -Subject $Subject -Attachments $fullpath -Body $Body -Priority high
