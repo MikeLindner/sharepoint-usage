@@ -1,7 +1,7 @@
 #Connect to SharePoint admin center using an admin account
 #Specify the URL to your SharePoint admin center site, e.g. https://contoso-admin.sharepoint.com
 
-$url = 'https://contoso-admin.sharepoint.com'
+$url = 'https://mikelindner.com-admin.sharepoint.com'
 
 #Specify a folder path to output the results into
 $path = '.\'
